@@ -5,16 +5,12 @@ from dotenv import load_dotenv
 import re
 from num2words import num2words
 
-from shows import shows
-
 load_dotenv()
 token = str(os.getenv("TOKEN"))
 
 intents = discord.Intents.all()
 intents.members = True
 bot = discord.Bot(intents=intents)
-
-showsObject = shows()
 
 @bot.event
 async def on_ready():
