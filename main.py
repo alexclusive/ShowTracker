@@ -1,5 +1,6 @@
 import os
 import discord
+import sys
 from dotenv import load_dotenv
 
 import re
@@ -21,6 +22,11 @@ async def on_ready():
 @bot.slash_command(name="hello", description="Say hello to the bot")
 async def hello(ctx):
 	await ctx.respond("Hey!")
+
+@bot.slash_command(name="goodbye", description="Say goodbye to the bot")
+async def hello(ctx):
+	await ctx.respond("Goodbye!")
+	sys.exit
 
 # @bot.slash_command(name="add_show", description="add a new show to the current list")
 # async def addShow(
